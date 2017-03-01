@@ -7,8 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step1", "Step1\Step1.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{24E91DC2-B63E-40E6-B80D-3F1B36B2D57E}"
 	ProjectSection(SolutionItems) = preProject
+		invoice.dat = invoice.dat
 		record.log = record.log
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step2", "Step2\Step2.csproj", "{17BC6487-B431-47F1-81C3-F42636B7B4DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +23,10 @@ Global
 		{8D0181FE-F737-4337-9C45-CEBCCA38FD6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D0181FE-F737-4337-9C45-CEBCCA38FD6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D0181FE-F737-4337-9C45-CEBCCA38FD6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17BC6487-B431-47F1-81C3-F42636B7B4DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17BC6487-B431-47F1-81C3-F42636B7B4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17BC6487-B431-47F1-81C3-F42636B7B4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17BC6487-B431-47F1-81C3-F42636B7B4DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
