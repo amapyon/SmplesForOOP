@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Step5.Tests
+namespace Step05.Tests
 {
     [TestClass()]
     public class ValuesTests

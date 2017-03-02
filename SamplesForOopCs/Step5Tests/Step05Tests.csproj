@@ -6,8 +6,8 @@
     <ProjectGuid>{599F0E23-77A6-4334-9164-1FEAD1F08A0B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Step5Tests</RootNamespace>
-    <AssemblyName>Step5Tests</AssemblyName>
+    <RootNamespace>Step05Tests</RootNamespace>
+    <AssemblyName>Step05Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,9 +55,9 @@
     <Compile Include="ValuesTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Step5\Step5.csproj">
+    <ProjectReference Include="..\Step5\Step05.csproj">
       <Project>{06B3BD91-E8E5-41D2-9CCB-8AC4B25C56C3}</Project>
-      <Name>Step5</Name>
+      <Name>Step05</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
