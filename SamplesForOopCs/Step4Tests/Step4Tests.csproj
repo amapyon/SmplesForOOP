@@ -6,8 +6,8 @@
     <ProjectGuid>{705F1494-B71C-40DC-A09E-E1DF7462596A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Step4Tests</RootNamespace>
-    <AssemblyName>Step4Tests</AssemblyName>
+    <RootNamespace>Step04Tests</RootNamespace>
+    <AssemblyName>Step04Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,9 +55,9 @@
     <Compile Include="ValuesTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Step4\Step4.csproj">
+    <ProjectReference Include="..\Step4\Step04.csproj">
       <Project>{454BC8A7-B0D6-4693-8B26-8BB130EDEA2F}</Project>
-      <Name>Step4</Name>
+      <Name>Step04</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
