@@ -8,10 +8,6 @@ namespace Step7
         // 料金計算のための基礎情報
         private static readonly int INITIAL_BASIC_CHARGE = 1000;
         private static readonly int INITIAL_CALL_UNIT_PRICE = 20;
-        private static readonly int FAMILY_SERVICE_BASIC_CHARGE = 100;
-        private static readonly string FAMILY_SERVICE_CODE = "C1";
-        private static readonly int DAY_SERVICE_BASIC_CHARGE = 200;
-        private static readonly string DAY_SERVICE_CODE = "E1";
 
         // 各レコードの先頭文字 (Record Code)
         private static readonly string RC_OWNER_INFO = "1";
@@ -21,14 +17,8 @@ namespace Step7
 
         // 各レコードの情報 (Record Information)
         private static readonly int RI_OF_OWNER_TEL_NUMBER = 2;
-        private static readonly int RI_OF_SERVICE_CODE = 2;
-        private static readonly int RI_SZ_SERVICE_CODE = 2;
-        private static readonly int RI_OF_SERVICE_OPTION = 5;
-        private static readonly int RI_OF_CALL_START_TIME = 13;
-        private static readonly int RI_SZ_HOUR = 2;
         private static readonly int RI_OF_CALL_MINUTE = 19;
         private static readonly int RI_SZ_CALL_MINUTE = 3;
-        private static readonly int RI_OF_CALL_NUMBER = 23;
 
         public static void Main(string[] args)
         {

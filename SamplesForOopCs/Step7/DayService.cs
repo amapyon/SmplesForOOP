@@ -8,7 +8,7 @@ namespace Step7
         private static readonly int END_TIME = 17;
 
         // 料金計算のための基礎情報
-        private static readonly String SERVICE_CODE = "E1";
+        private static readonly string SERVICE_CODE = "E1";
 	    private static readonly int BASIC_CHARGE = 200;
 
         // 各レコードの情報 (Record Information)
@@ -62,7 +62,7 @@ namespace Step7
         }
 
         // 単価を計算する
-        public int CalcUnitPrice(String line, int unitPrice)
+        public int CalcUnitPrice(string line, int unitPrice)
         {
             var hour = int.Parse(line.Substring(RI_OF_CALL_START_TIME, RI_SZ_HOUR));
             if (IsServiceTime(hour))
