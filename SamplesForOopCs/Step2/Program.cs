@@ -58,71 +58,17 @@ namespace Step2
                 else if (line.StartsWith(RC_SERVICE_INFO))
                 {
                     // 加入サービス情報
-
-                    if (DAY_SERVICE_CODE == line.Substring(RI_OF_SERVICE_CODE, RI_SZ_SERVICE_CODE))
-                    {
-                        // 昼トク割引
-                        values.dayServiceJoined = true;
-                    }
-                    else if (FAMILY_SERVICE_CODE == line.Substring(RI_OF_SERVICE_CODE, RI_SZ_SERVICE_CODE))
-                    {
-                        // 家族割引 登録されている電話番号を一時保管
-                        values.familyServiceJoined = true;
-                        values.familyServiceTelNumbers[values.familyServiceTelNumberCount++] = line.Substring(RI_OF_SERVICE_OPTION);
-                    }
+                    Service(values, line);
                 }
                 else if (line.StartsWith(RC_CALL_LOG))
                 {
                     // 通話記録
-
-                    // 単価を計算する
-                    int unitPrice = INITIAL_CALL_UNIT_PRICE;
-                    if (values.dayServiceJoined)
-                    {
-                        int hour = int.Parse(line.Substring(RI_OF_CALL_START_TIME, RI_SZ_HOUR));
-                        if ((hour >= DAY_SERVICE_START_TIME) && (hour <= DAY_SERVICE_END_TIME))
-                        {
-                            // 昼トク割引なら5円引き
-                            unitPrice -= 5;
-                        }
-                    }
-                    for (int i = 0; i < values.familyServiceTelNumberCount; i++)
-                    {
-                        if (values.familyServiceTelNumbers[i] == line.Substring(RI_OF_CALL_NUMBER))
-                        {
-                            // 家族割引なら半額
-                            unitPrice /= 2;
-                            break;
-                        }
-                    }
-
-                    // 1通話あたりの通話料を計算し、全通話料に加算する
-                    string minutes = line.Substring(RI_OF_CALL_MINUTE, RI_SZ_CALL_MINUTE);
-                    values.callCharge += unitPrice * int.Parse(minutes);
+                    Call(values, line);
                 }
                 else if (line.StartsWith(RC_SEPARATOR))
                 {
                     // 区切り
-
-                    // 基本料金の計算
-                    int basicCharge = INITIAL_BASIC_CHARGE;
-                    if (values.dayServiceJoined)
-                    {
-                        basicCharge += DAY_SERVICE_BASIC_CHARGE;
-                    }
-                    if (values.familyServiceJoined)
-                    {
-                        basicCharge += FAMILY_SERVICE_BASIC_CHARGE;
-                    }
-
-                    // 集計結果の出力
-                    writer.WriteLine("1 " + values.ownerTelNumber);
-                    writer.WriteLine("5 " + basicCharge);
-                    writer.WriteLine("7 " + values.callCharge);
-                    writer.WriteLine("9 ====================");
-
-                    // 変数の初期化
-                    values.Clear();
+                    Separate(writer, values);
                 }
 
 
@@ -135,5 +81,74 @@ namespace Step2
             reader.Close();
             fis.Close();
         }
+
+        private static void Service(Values values, string line)
+        {
+            if (DAY_SERVICE_CODE == line.Substring(RI_OF_SERVICE_CODE, RI_SZ_SERVICE_CODE))
+            {
+                // 昼トク割引
+                values.dayServiceJoined = true;
+            }
+            else if (FAMILY_SERVICE_CODE == line.Substring(RI_OF_SERVICE_CODE, RI_SZ_SERVICE_CODE))
+            {
+                // 家族割引 登録されている電話番号を一時保管
+                values.familyServiceJoined = true;
+                values.familyServiceTelNumbers[values.familyServiceTelNumberCount++] = line.Substring(RI_OF_SERVICE_OPTION);
+            }
+        }
+
+        private static void Call(Values values, string line)
+        {
+
+            // 単価を計算する
+            int unitPrice = INITIAL_CALL_UNIT_PRICE;
+            if (values.dayServiceJoined)
+            {
+                int hour = int.Parse(line.Substring(RI_OF_CALL_START_TIME, RI_SZ_HOUR));
+                if ((hour >= DAY_SERVICE_START_TIME) && (hour <= DAY_SERVICE_END_TIME))
+                {
+                    // 昼トク割引なら5円引き
+                    unitPrice -= 5;
+                }
+            }
+            for (int i = 0; i < values.familyServiceTelNumberCount; i++)
+            {
+                if (values.familyServiceTelNumbers[i] == line.Substring(RI_OF_CALL_NUMBER))
+                {
+                    // 家族割引なら半額
+                    unitPrice /= 2;
+                    break;
+                }
+            }
+
+            // 1通話あたりの通話料を計算し、全通話料に加算する
+            string minutes = line.Substring(RI_OF_CALL_MINUTE, RI_SZ_CALL_MINUTE);
+            values.callCharge += unitPrice * int.Parse(minutes);
+        }
+
+        private static void Separate(StreamWriter writer, Values values)
+        {
+
+            // 基本料金の計算
+            int basicCharge = INITIAL_BASIC_CHARGE;
+            if (values.dayServiceJoined)
+            {
+                basicCharge += DAY_SERVICE_BASIC_CHARGE;
+            }
+            if (values.familyServiceJoined)
+            {
+                basicCharge += FAMILY_SERVICE_BASIC_CHARGE;
+            }
+
+            // 集計結果の出力
+            writer.WriteLine("1 " + values.ownerTelNumber);
+            writer.WriteLine("5 " + basicCharge);
+            writer.WriteLine("7 " + values.callCharge);
+            writer.WriteLine("9 ====================");
+
+            // 変数の初期化
+            values.Clear();
+        }
+
     }
 }
