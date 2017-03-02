@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Step6.Tests
+namespace Step06.Tests
 {
     [TestClass()]
     public class FamilyServiceTests

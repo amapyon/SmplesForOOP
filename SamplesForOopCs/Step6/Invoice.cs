@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Step6
+namespace Step06
 {
     public class Invoice
     {

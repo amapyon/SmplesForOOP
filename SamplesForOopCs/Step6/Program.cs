@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Step6
+namespace Step06
 {
     public class Program
     {

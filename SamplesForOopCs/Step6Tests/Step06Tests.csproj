@@ -6,8 +6,8 @@
     <ProjectGuid>{4F4E3541-7E2B-4C89-9129-ED471A0AFCDC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Step6Tests</RootNamespace>
-    <AssemblyName>Step6Tests</AssemblyName>
+    <RootNamespace>Step06Tests</RootNamespace>
+    <AssemblyName>Step06Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -56,9 +56,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Step6\Step6.csproj">
+    <ProjectReference Include="..\Step6\Step06.csproj">
       <Project>{4F365EF8-5EB2-41AF-99D6-657F1A5DA3E1}</Project>
-      <Name>Step6</Name>
+      <Name>Step06</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
