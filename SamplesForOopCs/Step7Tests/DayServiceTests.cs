@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Step7.Tests
+namespace Step07.Tests
 {
     [TestClass()]
     public class DayServiceTests

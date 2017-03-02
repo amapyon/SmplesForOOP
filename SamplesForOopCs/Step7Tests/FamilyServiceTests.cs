@@ -1,7 +1,6 @@
-﻿using Step7;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Step7.Tests
+namespace Step07.Tests
 {
     [TestClass()]
     public class FamilyServiceTests

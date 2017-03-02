@@ -6,8 +6,8 @@
     <ProjectGuid>{9F6C6224-A875-487E-8DA8-11EE9E1D59FF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Step7Tests</RootNamespace>
-    <AssemblyName>Step7Tests</AssemblyName>
+    <RootNamespace>Step07Tests</RootNamespace>
+    <AssemblyName>Step07Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -56,9 +56,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Step7\Step7.csproj">
+    <ProjectReference Include="..\Step7\Step07.csproj">
       <Project>{EA160423-DE1C-4D5D-B020-0E7DAF37B8C2}</Project>
-      <Name>Step7</Name>
+      <Name>Step07</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

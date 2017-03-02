@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Step7
+namespace Step07
 {
     public class DayService
     {
