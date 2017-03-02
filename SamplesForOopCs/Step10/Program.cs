@@ -18,7 +18,6 @@ namespace Step10
 
         public static void Main(string[] args)
         {
-
             var fis = new FileStream("../../../record.log", FileMode.Open);
             var reader = new StreamReader(fis);
 
@@ -27,8 +26,6 @@ namespace Step10
             writer.NewLine = "\n";
 
             var invoice = new Invoice();
-            var dayService = new DayService();
-            var familyService = new FamilyService();
             var services = new ServiceList();
 
             string line = reader.ReadLine();
