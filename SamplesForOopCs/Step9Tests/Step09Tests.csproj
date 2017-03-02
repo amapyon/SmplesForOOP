@@ -6,8 +6,8 @@
     <ProjectGuid>{940E7BEC-A8DB-4472-B015-75BC919A369F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Step9Tests</RootNamespace>
-    <AssemblyName>Step9Tests</AssemblyName>
+    <RootNamespace>Step09Tests</RootNamespace>
+    <AssemblyName>Step09Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -56,9 +56,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Step9\Step9.csproj">
+    <ProjectReference Include="..\Step9\Step09.csproj">
       <Project>{497288C5-CBAB-476C-AA43-DB3E9A91E967}</Project>
-      <Name>Step9</Name>
+      <Name>Step09</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
