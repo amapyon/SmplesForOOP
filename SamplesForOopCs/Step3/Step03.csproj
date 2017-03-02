@@ -7,8 +7,8 @@
     <ProjectGuid>{6756C323-0C8F-419D-AC42-215E55F971A3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Step3</RootNamespace>
-    <AssemblyName>Step3</AssemblyName>
+    <RootNamespace>Step03</RootNamespace>
+    <AssemblyName>Step03</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
